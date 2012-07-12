@@ -1,5 +1,9 @@
 #!/usr/bin/env ruby
 
+# Avoid encoding error in Ruby 1.9 when system locale does not match Git encoding
+# Binary encoding should probably work regardless of the underlying locale
+Encoding.default_external='binary' if defined?(Encoding)
+
 require 'optparse'
 require 'time'
 
