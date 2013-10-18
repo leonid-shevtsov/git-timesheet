@@ -37,7 +37,7 @@ else
     timestamp = Time.parse line.slice!(0,25)
     day = timestamp.strftime("%Y-%m-%d")
     days[day] ||= []
-    days[day] << timestamp.strftime("%H:%S ") + line.strip
+    days[day] << timestamp.strftime("%H:%M ") + line.strip
     days
   }.sort{|a,b| a[0]<=>b[0]}
   puts day_entries.map{|day, entries| "#{day}\n#{'='*10}\n\n#{entries.sort.join("\n")}\n\n"}
