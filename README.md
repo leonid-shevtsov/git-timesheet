@@ -7,6 +7,7 @@ A tool to generate your timesheet from a git log. Put it in your `~/bin`!
         -s, --since [TIME]               Start date for the report (default is 1 week ago)
         -a, --author [EMAIL]             User for the report (default is the author set in git config)
             --authors                    List all available authors
+        -c, --current [CURRENT]          Only use `git log` for current branch
 
 ## Changelog
 
